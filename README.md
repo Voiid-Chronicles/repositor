@@ -1,72 +1,54 @@
-# Gerenciador de Tarefas — Mini Projeto (Python Puro)
+# Sistema de Gerenciamento de Biblioteca
 
-Bem-vindo(a) ao mini projeto de 3 aulas! Vocês vão construir, passo a
-passo, um gerenciador de tarefas que roda no terminal — sem nenhuma
-biblioteca externa, só Python puro.
+## Descrição
 
-## Como este repositório funciona
+Este projeto é um sistema de gerenciamento de biblioteca desenvolvido em Python. O programa permite cadastrar livros, registrar empréstimos e devoluções, realizar buscas, listar e ordenar os livros cadastrados. Os dados são armazenados em um arquivo JSON para que as informações permaneçam salvas mesmo após o encerramento do programa.
 
-Existe **um único arquivo**, `main.py`, que vocês vão completar ao longo
-das 3 aulas. Não tem branch, não tem pasta separada — é sempre o mesmo
-arquivo crescendo.
+---
 
-Cada aula tem um arquivo de instruções próprio:
+## Como executar o programa
 
-| Arquivo      | Quando usar                                          |
-|--------------|-------------------------------------------------------|
-| `AULA1.md`   | O que fazer na primeira aula                          |
-| `AULA2.md`   | O que fazer na segunda aula                           |
-| `AULA3.md`   | O que fazer na terceira aula                          |
+### Requisitos
+- Python 3 instalado no computador.
 
-Abram o arquivo da aula do dia, leiam o objetivo e procurem em `main.py`
-os comentários `# TODO` — é ali que vocês vão escrever código.
+### Passos
 
-## Como começar
+1. Baixe ou clone o projeto.
+2. Abra a pasta do projeto no terminal.
+3. Execute o arquivo principal com o comando:
 
 ```bash
-git clone https://github.com/leandro-abilio/mini-projeto-todo-list.git
-cd mini-projeto-todo-list
+python biblioteca.py
 ```
 
-Abra `AULA1.md` para começar.
-
-## Como rodar o programa
+> Caso seu sistema utilize `python3`, execute:
 
 ```bash
-python3 main.py
+python3 biblioteca.py
 ```
 
-(ou `python main.py` no Windows)
+O arquivo `biblioteca.json` será criado automaticamente na primeira execução para armazenar os dados da biblioteca.
 
-## Salvando o progresso de cada aula
+---
 
-Ao final de cada aula, façam commit do que completaram:
+## Principais funcionalidades
 
-```bash
-git add main.py
-git commit -m "Aula 1 concluida"
-```
+- Cadastrar novos livros.
+- Listar todos os livros cadastrados.
+- Buscar livros pelo título ou autor.
+- Registrar empréstimos de livros.
+- Registrar devoluções de livros.
+- Ordenar os livros por título, autor ou ano de publicação.
+- Salvar automaticamente os dados em arquivo para uso nas próximas execuções.
 
-Isso não é obrigatório para o programa funcionar, mas é uma boa prática
-e ajuda a registrar a evolução do projeto. Tudo fica no mesmo arquivo,
-então não precisam trocar de branch nem de pasta — só continuem editando
-`main.py` na aula seguinte.
+---
 
-## Requisitos
+## Requisitos técnicos aplicados
 
-- Python 3.8 ou superior
-- Nenhuma biblioteca externa (apenas a biblioteca padrão)
-
-## Estrutura do projeto
-
-```
-.
-├── main.py        # o programa (vocês vão completar)
-├── AULA1.md       # instruções da aula 1
-├── AULA2.md       # instruções da aula 2
-├── AULA3.md       # instruções da aula 3
-├── README.md      # este arquivo
-└── .gitignore
-```
-
-Bom projeto! 🚀
+- **Menu principal com `if/elif/else`:** utilizado no menu de opções do sistema.
+- **Estrutura de repetição (`while`):** mantém o programa em execução até o usuário escolher a opção "Sair".
+- **Funções com parâmetros e retorno:** utilizadas em funções como `cadastrar_livro()`, `buscar_livro()`, `emprestar_livro()`, `devolver_livro()`, `listar_livros()` e `ordenar_livros()`.
+- **Lista de dicionários:** cada livro é armazenado como um dicionário dentro da lista `livros`.
+- **Persistência em arquivo:** leitura e escrita dos dados utilizando o arquivo `biblioteca.json` com a biblioteca `json`.
+- **Comentários explicativos:** o código contém comentários descrevendo as principais partes da lógica.
+- **Nomes de variáveis e funções significativos:** foram utilizados nomes claros para facilitar a leitura e manutenção do código.
