@@ -33,8 +33,7 @@ while True:
     if opcao == "1":
         med = {
             "nome": input("Nome: "),
-            "principio_ativo": input("Princípio ativo: "),
-            "laboratorio": input("Laboratório: "),
+            "categoria": input("categoria: "),
             "quantidade": input("Quantidade: ")
         }
         medicamentos.append(med)
